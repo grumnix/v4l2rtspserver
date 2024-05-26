@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-24.05";
     flake-utils.url = "github:numtide/flake-utils";
 
     v4l2rtspserver_src.url = "git+https://github.com/mpromonet/v4l2rtspserver.git?submodules=1";
@@ -22,7 +22,7 @@
             src = v4l2rtspserver_src;
 
             nativeBuildInputs = with pkgs; [
-              pkgconfig
+              pkg-config
               cmake
               git
             ];
